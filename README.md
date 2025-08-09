@@ -24,9 +24,9 @@ The 7-bit data stream consists of:
 
 3. Parity Comparison: 
 
-   During transmission, the received data includes 4 message bits and 3 parity bits. 
+  * During transmission, the received data includes 4 message bits and 3 parity bits. 
 
-   Using 2-input XOR gates, the system compares the received parity bits with recalculated parity bits to generate the syndrome vector (S1,S2,S4S_1, S_2, S_4S1​,S2​,S4​). 
+  * Using 2-input XOR gates, the system compares the received parity bits with recalculated parity bits to generate the syndrome vector (S1,S2,S4S_1, S_2, S_4S1​,S2​,S4​). 
 
 4.Error Detection with Decoder: 
 
@@ -36,10 +36,9 @@ The 7-bit data stream consists of:
 
 5.Error Correction: 
 
-  Using XOR gates, the system flips the erroneous bit based on the one-hot signal from the decoder. 
-
-  The corrected 7-bit stream is then used to extract the original 4-bit message. 
+   Using XOR gates, the system flips the erroneous bit based on the one-hot signal from the decoder. 
+   The corrected 7-bit stream is then used to extract the original 4-bit message. 
 
 6.Output Recovery: 
 
-  The corrected 7-bit stream is split into 4 message bits p1p2d1p3d2d3d4 
+   The corrected 7-bit stream is split into 4 message bits p1p2d1p3d2d3d4 
